@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let carro={
+            modelo:'Opala',
+            ano:1994,
+            cor:'preto',
+            combustivel:'gasolina'
+        }
+       // alert(carro.modelo)
+       function listar(){
+document.getElementById('descreve_obj').innerHTML= `Modelo:  ${carro.modelo} <br> Ano: ${carro.ano} <br> Cor: ${carro.cor} <br> Combustivel: ${carro.combustivel}`
+       }
+       function inserir(){
+        if (modeloc.value != '' || anoc.value != '' || corc.value != '' || combc.value != '') {
+               carro.modelo = modeloc.value
+               carro.ano = anoc.value
+               carro.cor = corc.value
+               carro.combustivel = combc.value
+           }
+        
+listar()
+
+       }
+
+    </script>
+</head>
+<body onload="listar()">
+    
+    <div id="descreve_obj"></div>
+    <br>
+    <label for="modrloc">Modelo:</label>
+    <input type="text" name="modrloc" id="modeloc">
+    <br>
+    <label for="anoc">Ano:</label>
+    <input type="number" name="anoc" id="anoc">
+    <br>
+     <label for="corc">Cor:</label>
+    <input type="text" name="corc" id="corc">
+    <br>
+     <label for="combc">Combustivel:</label>
+    <input type="text" name="combc" id="combc">
+    <br>
+   
+    <input type="button" value="Inserir" onclick="inserir()">
+</body>
+</html>
